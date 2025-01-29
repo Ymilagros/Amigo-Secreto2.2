@@ -1,0 +1,225 @@
+:root {
+    --color-primary: #181717;
+    --color-secondary: #FFF9EB;
+    --color-button: #52e9ee;
+    --color-button-hover: #f37aad;
+    --color-text: #444444;
+    --color-orange: #fc810e;
+}
+
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('assets/explosionColores.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+}
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Header y banner */
+.header-banner {
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: -3rem;
+}
+
+.main-title {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-orange);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Sección de entrada */
+.input-section {
+    width: 100%;
+    max-width: 800px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: -4rem; /* Ajuste adicional para subir el cajón */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Contenedor de input */
+.input-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-name {
+    flex: 1;
+    max-width: 400px;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.input-name:focus {
+    outline: none;
+    border-color: var(--color-button-hover);
+    box-shadow: 0 0 0 3px rgba(228, 65, 133, 0.2);
+}
+
+.agregarAmigo {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-button);
+    color: var(--color-text);
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.agregarAmigo:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+/* Listas */
+.name-list, .result-list {
+    list-style: none;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.result-list {
+    color: #1d080a;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Botón de sorteo */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-button);
+    color: var(--color-text);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-draw img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-name {
+        width: 100%;
+    }
+
+    .button-draw {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .input-section {
+        padding: 1rem;
+    }
+    
+    .header-banner img {
+        max-width: 150px;
+    }
+}
